@@ -1,0 +1,27 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: var(--FontFamily);
+    font-size: .9rem;
+    -webkit-user-drag: none;
+}
+
+:root {
+    --FontFamily: 'Poppins';
+    --DarkThemeColor: rgb(40, 40, 40);
+    --MsgConteinerBGColor: #e9bf6931;
+    --BodyBGColor: rgba(153, 144, 94, .5);
+    --AccountOwnerBGColor: rgba(122, 124, 124, .3);
+    --SearchBarBGColor: rgba(142, 124, 124, .2);
+    --UserSectionBGColor: rgb(218, 218, 218);
+    --UserImgBGColor: rgb(240, 240, 240);
+    --ConUserInfoBGColor: rgba(204, 204, 204, 1);
+    --MsgReceiverBGColor: #143a34;
+    --MsgSenderBGColor: #032f4a;
+    --MsgContainerWidth: 75%;
+    --ConUserInfoHeight: 50px;
+}

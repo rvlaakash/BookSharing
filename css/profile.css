@@ -1,0 +1,331 @@
+:root {
+    --hoverEffectColor: white;
+}
+
+body {
+    font-size: 16px !important;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(231, 231, 231);
+}
+
+#main {
+    font-family: 'POPPINS';
+    width: 100%;
+    height: 100%;
+    padding: 4rem .5rem 0.3rem .5rem;
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 2fr;
+}
+
+
+/* Sidebar where user can navigate which option he want to edit*/
+
+#sidebar {
+    width: 50%;
+    height: 100%;
+    background-color: rgb(1, 4, 34);
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+    z-index: 5;
+    justify-self: flex-end;
+    padding: 2rem 0rem 0rem 0rem;
+}
+
+
+/* sidebar img container where user's dp will be show */
+
+#sidebar #profilephoto {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    justify-self: center;
+    overflow: hidden;
+}
+
+
+/* sidebar accual img  where user's dp will be show */
+
+#profilephoto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* sidebar user's will select what he want to edit*/
+
+#sidebar #profileinfo {
+    width: 100%;
+    height: 100%;
+    gap: .2rem;
+    isolation: isolate;
+    font-weight: 400;
+}
+
+
+/* sidebar options container*/
+
+#profileinfo ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    list-style: none;
+    position: relative;
+}
+
+
+/* sidebar options */
+
+#profileinfo li {
+    position: relative;
+    width: 98%;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    isolation: isolate;
+    margin: 1.4rem 0rem;
+    border-bottom-left-radius: 50px;
+    border-top-left-radius: 50px;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+
+
+/* sidebar option hover effect things */
+
+#profileinfo .active {
+    transition: all .6s ease-in-out;
+    text-shadow: 0 0 12px rgb(78, 78, 78);
+    color: black;
+}
+
+
+/* sidebar option hover effect moving container  */
+
+.active~.activator {
+    position: absolute;
+    z-index: -1;
+    width: 98%;
+    height: 2.3rem;
+    border-bottom-left-radius: 50px;
+    border-top-left-radius: 50px;
+    transition: .3s ease-in-out;
+    background: var(--hoverEffectColor);
+}
+
+
+/* sidebar option hover effect to make it curve*/
+
+.activator::after,
+.activator::before {
+    position: absolute;
+    content: '';
+    right: 0;
+    top: -50%;
+    width: 10%;
+    height: 50%;
+    box-shadow: 5px 5px 0 0 white;
+    border-bottom-right-radius: 60%;
+    background-color: rgb(1, 4, 39);
+}
+
+.activator::before {
+    top: 100%;
+    bottom: 0;
+    box-shadow: 5px -5px 0 0 white;
+    border-top-right-radius: 50%;
+}
+
+
+/* sidebar hover sliding effect */
+
+#profileinfo li:nth-child(1).active~.activator {
+    transform: translateY(calc(60% * 1));
+}
+
+#profileinfo li:nth-child(2).active~.activator {
+    transform: translateY(calc(100% * 2.6));
+}
+
+#profileinfo li:nth-child(3).active~.activator {
+    transform: translateY(calc(100% * 4.7));
+}
+
+#profileinfo li:nth-child(4).active~.activator {
+    transform: translateY(calc(100% * 6.8));
+}
+
+
+/* profile container */
+
+#profile {
+    width: 80%;
+    padding: .4rem .3rem;
+    background-color: rgb(253, 253, 253);
+    box-shadow: 0px 0px 15px rgb(160, 157, 157);
+    display: flex;
+    flex-direction: column;
+    justify-self: flex-start;
+    overflow: hidden
+}
+
+
+/* profile container title*/
+
+#profile .header {
+    display: flex;
+}
+
+
+/* user dp updater area*/
+
+.header img {
+    margin-top: .3rem;
+    align-self: flex-start;
+    visibility: hidden;
+}
+
+#profile h1 {
+    width: 100%;
+    align-self: flex-start;
+    margin: 1.5rem 0rem 2rem 0rem;
+    text-align: center;
+}
+
+#profile form {
+    width: 55%;
+    display: grid;
+    grid-template-columns: 1fr 3fr .5fr;
+    row-gap: 1rem;
+    justify-self: center;
+    align-self: center;
+    place-items: center;
+}
+
+#profile form input {
+    width: 100%;
+    border: none;
+    padding: .4rem .2rem;
+    border-bottom: 2px solid black;
+    background: transparent;
+    justify-self: baseline;
+}
+
+#profile form label {
+    font-size: .9rem;
+    justify-self: flex-start;
+    color: rgb(37, 39, 44);
+}
+
+#profile form label:nth-child(1) {
+    justify-self: center;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    cursor: pointer;
+}
+
+#profile form .dp {
+    width: 6rem;
+    height: 6rem;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    display: flex;
+    position: relative;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.dp .changeimgicon img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    object-fit: contain;
+}
+
+.dp .changeimgicon {
+    pointer-events: all;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    bottom: -.2rem;
+    right: 0.4rem;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+}
+
+#profile form .dp img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+#profile #profiledp {
+    display: none;
+}
+
+#profile .response {
+    align-self: center;
+    justify-self: flex-end;
+    width: 100%;
+    margin: 1rem;
+    padding: 1rem;
+    text-align: center;
+    background-color: aqua;
+}
+
+@media only screen and (max-width:770px) {
+    #main {
+        padding: 4rem .1rem 0.3rem .1rem;
+        grid-template-columns: inherit;
+        grid-template-rows: 1fr 2fr;
+        place-items: initial;
+    }
+    #sidebar {
+        width: 100%;
+        max-height: 100%;
+        padding: 0rem;
+        grid-template-rows: 40% 60%;
+        grid-template-columns: initial;
+        justify-content: initial;
+    }
+    #sidebar #profilephoto {
+        justify-self: center;
+        align-self: center;
+        width: 2rem;
+        height: 2rem;
+    }
+    #sidebar #profileinfo ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: .5rem;
+    }
+    #profileinfo li.active {
+        color: white;
+    }
+    #profileinfo .activator {
+        all: unset;
+    }
+    #profileinfo li.active~.activator {
+        all: unset;
+    }
+    #profileinfo .active a {
+        color: white;
+    }
+    #profile {
+        width: 100%;
+        justify-self: normal;
+    }
+    #profile form {
+        width: 100%;
+    }
+}
