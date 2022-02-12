@@ -4,10 +4,20 @@ $css_file_name = "profile";
 require_once "php/LoginCheck.php";
 require_once "php/navbar.php";
 ?>
+
 <!DOCTYPE html>
 
 
-
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/profile.css" async>
+    <link rel="stylesheet" href="css/navbar.css" async>
+    <title>Book Sharing</title>
+</head>
 <?php
 require_once "php/dbconfig.php";
 $fetchuserDetails = "SELECT * FROM user WHERE user_id = " . $_SESSION['userID'] . " ";
