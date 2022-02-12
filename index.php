@@ -31,9 +31,7 @@ require "php/navbar.php";
                 "</a>";
         }
     } else {
-        echo "<h1 class='error'>
-                    No Book For Sell
-            </h1>";
+        echo "<h1 class='error'>No Book For Sell</h1>";
     }
     ?>
 </div>

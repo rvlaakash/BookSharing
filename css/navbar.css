@@ -45,6 +45,7 @@ a {
     align-items: center;
     justify-content: flex-end;
     gap: 1.8rem;
+    padding-right: 3rem;
 }
 
 header #burger {
@@ -68,8 +69,6 @@ header #burger {
 }
 
 #navbar li {
-    width: 5rem;
-    height: 2rem;
     line-height: 2rem;
     text-align: center;
 }

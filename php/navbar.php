@@ -28,7 +28,6 @@
                 <li><a href="user.php">Users</a></li>
                 <li><a href="delivery.php">DeliveryGuy</a></li>
                 <li><a href="books.php">Books</a></li>
-                <li><a href="profilepage.php"><img src="./img/profile.png" alt=""></a></li>
             <?php
             } else {
             ?>
