@@ -4,6 +4,7 @@ $css_file_name = "profile";
 require_once "php/LoginCheck.php";
 require_once "php/navbar.php";
 ?>
+
 <!DOCTYPE html>
 
 
@@ -13,7 +14,7 @@ require_once "php/navbar.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/.css" async>
+    <link rel="stylesheet" href="css/profile.css" async>
     <link rel="stylesheet" href="css/navbar.css" async>
     <title>Book Sharing</title>
 </head>
