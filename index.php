@@ -17,7 +17,7 @@ require "php/navbar.php";
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="css/navbar.css">
 
-    <title>Dash_BS</title>
+    <title>Dashboard</title>
 </head>
 
 <body>
@@ -55,5 +55,5 @@ require "php/navbar.php";
     <script src="./js/dashboard.js"></script>
     <script src="./js/ajax.js"></script>
 </body>
-
+<?php require'php/footer.php';?>
 </html>

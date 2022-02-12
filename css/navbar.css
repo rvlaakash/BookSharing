@@ -7,7 +7,7 @@ header {
     justify-content: space-between;
     box-shadow: 0rem .2rem .4rem rgba(100, 100, 111, 0.2);
     position: absolute;
-    background-color: #fff;
+    background-color: #00B0B2;
     top: 0;
     left: 0;
 }
@@ -32,7 +32,8 @@ header ul {
 
 a {
     text-decoration: none;
-    color: black;
+    color: white;
+    font-size: medium;
 }
 
 #navbar {
