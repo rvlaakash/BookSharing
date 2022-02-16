@@ -49,7 +49,8 @@ require "php/navbar.php";
         $('.mytable').DataTable({
             paging: true,
             searching: true,
-            ordering: true
+            ordering: true,
+            "error": "No Delivery Guy Found"
         });
     });
 </script>
