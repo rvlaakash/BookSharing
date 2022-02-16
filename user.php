@@ -5,6 +5,8 @@ require "php/dbconfig.php";
 require "php/navbar.php";
 ?>
 <link rel="stylesheet" href="//cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css">
+<h3 class="titleofpage" > List of All Users</h3>
+
 <div id="main">
     <table class="mytable">
         <thead>

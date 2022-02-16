@@ -15,7 +15,8 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 	echo "Please Match Proper Email Formate:- Example123@gmail.com";
 	exit();
 } else {
-	$h_pass = hash("sha1", $pw);
+	$h_pass = $pw;
+	// $h_pass = hash("sha1", $pw);
 
 	$q = "SELECT * FROM user where email = '" . trim($email) . "' AND password = '" . trim($h_pass) . "' ";
 	$result = mysqli_query($con, $q);

@@ -15,7 +15,7 @@
 <body>
     <header>
         <div class="logo_container">
-            <img src="./img/logo.png" alt="">
+            <img src="./img/logos.png" alt="">
         </div>
         <ul id="navbar">
             <?php

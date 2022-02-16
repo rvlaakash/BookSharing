@@ -55,7 +55,6 @@ require "php/navbar.php";
     </form>
   </div>
   <script src="./js/sellBook.js"></script>
-  <?php require'php/footer.php';?>
-</body>
 
+</body>
 </html>
